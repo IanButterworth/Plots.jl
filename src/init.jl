@@ -93,4 +93,6 @@ function __init__()
     @require FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549" begin
         _show(io::IO, mime::MIME"image/png", plt::Plot{<:PDFBackends}) = _show_pdfbackends(io, mime, plt)
     end
+
+    sleep(2) # to test for load time regression
 end
